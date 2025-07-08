@@ -18,11 +18,11 @@ classifiers = [
     "Development Status :: 5 - Production/Stable",
     "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
     "Topic :: System :: Hardware :: Hardware Drivers",
-    "Topic :: Scientific/Engineering :: Robotics",
+    "Topic :: Scientific/Engineering",
     "Intended Audience :: Science/Research",
     "Intended Audience :: Education",
     "Intended Audience :: Developers",
-    "Operating System :: Linux",
+    "Operating System :: POSIX :: Linux",
     "Operating System :: MacOS",
     "Operating System :: Microsoft :: Windows",
 
@@ -38,7 +38,7 @@ dependencies = [
     "pyusb~=1.2",
     "libusb-package~=1.0",
     "scipy~=1.14",
-    "numpy~=1.26",
+    "numpy~=2.2",
     "packaging~=24.2",
 ]
 

@@ -138,6 +138,10 @@ So now we are going to start up the SyncCrazyflie and start a function in the `_
             print('No flow deck detected!')
             sys.exit(1)
 
+        # Arm the Crazyflie
+        scf.cf.platform.send_arming_request(True)
+        time.sleep(1.0)
+
         take_off_simple(scf)
 ```
 See that we are now using `deck_attached_event.wait()`? If this returns false, the function will not be called and the crazyflie will not take off.
@@ -224,6 +228,10 @@ if __name__ == '__main__':
         if not deck_attached_event.wait(timeout=5):
             print('No flow deck detected!')
             sys.exit(1)
+
+        # Arm the Crazyflie
+        scf.cf.platform.send_arming_request(True)
+        time.sleep(1.0)
 
         take_off_simple(scf)
 
@@ -313,6 +321,10 @@ if __name__ == '__main__':
         if not deck_attached_event.wait(timeout=5):
             print('No flow deck detected!')
             sys.exit(1)
+
+        # Arm the Crazyflie
+        scf.cf.platform.send_arming_request(True)
+        time.sleep(1.0)
 
         move_linear_simple(scf)
 ```
@@ -422,6 +434,10 @@ if __name__ == '__main__':
         if not deck_attached_event.wait(timeout=5):
             print('No flow deck detected!')
             sys.exit(1)
+
+        # Arm the Crazyflie
+        scf.cf.platform.send_arming_request(True)
+        time.sleep(1.0)
 
         logconf.start()
 
@@ -535,6 +551,10 @@ if __name__ == '__main__':
         if not deck_attached_event.wait(timeout=5):
             print('No flow deck detected!')
             sys.exit(1)
+
+        # Arm the Crazyflie
+        scf.cf.platform.send_arming_request(True)
+        time.sleep(1.0)
 
         logconf.start()
         move_box_limit(scf)
@@ -663,6 +683,10 @@ if __name__ == '__main__':
             print('No flow deck detected!')
             sys.exit(1)
 
+        # Arm the Crazyflie
+        scf.cf.platform.send_arming_request(True)
+        time.sleep(1.0)
+
         logconf.start()
         move_box_limit(scf)
         logconf.stop()
@@ -673,4 +697,4 @@ You're done! The full code of this tutorial can be found in the example/step-by-
 
 ## What is next ?
 
-Now you are able to send velocity commands to the Crazyflie and react upon logging and parameters variables, so one step closer to writing your own application with the Crazyflie python library! Check out the motion_commander_demo.py in the example folder of the cflib if you would like to see what the commander can do.
+Now you are able to send velocity commands to the Crazyflie and react upon logging and parameters variables, so one step closer to writing your own application with the Crazyflie python library! Check out the [motion_commander_demo.py](https://github.com/bitcraze/crazyflie-lib-python/blob/master/examples/step-by-step/sbs_motion_commander.py) in the example folder of the cflib if you would like to see what the commander can do.
