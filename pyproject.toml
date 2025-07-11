@@ -4,7 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "cflib"
-dynamic = ["version"]
+#dynamic = ["version"]
+version = "0.1.30-dev"    # ← bất kỳ số nào ≥0.1.27
 description = "Crazyflie Python driver"
 authors = [
     { name = "Bitcraze and contributors", email = "contact@bitcraze.io" },
